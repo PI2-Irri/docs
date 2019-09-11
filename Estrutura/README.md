@@ -1,4 +1,4 @@
-# Megazorde da estrutura.
+# Estrutura
 
 ## Equipes
 
