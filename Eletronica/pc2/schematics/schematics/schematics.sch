@@ -1,0 +1,403 @@
+EESchema Schematic File Version 4
+LIBS:schematics-cache
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Diode:1N4002 D1
+U 1 1 5D8E28A8
+P 4750 1350
+F 0 "D1" H 4750 1566 50  0000 C CNN
+F 1 "1N4002" H 4750 1475 50  0000 C CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 4750 1175 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 4750 1350 50  0001 C CNN
+	1    4750 1350
+	-1   0    0    1   
+$EndComp
+$Comp
+L Diode:1N4002 D3
+U 1 1 5D8E2FAF
+P 4250 1850
+F 0 "D3" H 4250 2066 50  0000 C CNN
+F 1 "1N4002" H 4250 1975 50  0000 C CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 4250 1675 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 4250 1850 50  0001 C CNN
+	1    4250 1850
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Diode:1N4002 D4
+U 1 1 5D8E36DC
+P 4750 2350
+F 0 "D4" H 4750 2566 50  0000 C CNN
+F 1 "1N4002" H 4750 2475 50  0000 C CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 4750 2175 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 4750 2350 50  0001 C CNN
+	1    4750 2350
+	-1   0    0    1   
+$EndComp
+$Comp
+L Diode:1N4002 D2
+U 1 1 5D8E3D2D
+P 5250 1850
+F 0 "D2" H 5250 2066 50  0000 C CNN
+F 1 "1N4002" H 5250 1975 50  0000 C CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 5250 1675 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 5250 1850 50  0001 C CNN
+	1    5250 1850
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Transistor_BJT:TIP42 Q1
+U 1 1 5D8E42FD
+P 7750 2250
+F 0 "Q1" V 7985 2250 50  0000 C CNN
+F 1 "TIP42" V 8076 2250 50  0000 C CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 8000 2175 50  0001 L CIN
+F 3 "https://www.centralsemi.com/get_document.php?cmp=1&mergetype=pd&mergepath=pd&pdf_id=TIP42.PDF" H 7750 2250 50  0001 L CNN
+	1    7750 2250
+	0    -1   1    0   
+$EndComp
+$Comp
+L Diode:1N47xxA DZ1
+U 1 1 5D8E4E9F
+P 7750 1600
+F 0 "DZ1" V 7704 1679 50  0000 L CNN
+F 1 "1N4730A" V 7795 1679 50  0000 L CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 7750 1425 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/85816/1n4728a.pdf" H 7750 1600 50  0001 C CNN
+	1    7750 1600
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:Transformer_1P_1S T1
+U 1 1 5D8E55B6
+P 3350 1750
+F 0 "T1" H 3350 2131 50  0000 C CNN
+F 1 "Transformer_1P_1S" H 3350 2040 50  0000 C CNN
+F 2 "" H 3350 1750 50  0001 C CNN
+F 3 "~" H 3350 1750 50  0001 C CNN
+	1    3350 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5D8E6A41
+P 7000 2100
+F 0 "R1" H 7070 2146 50  0000 L CNN
+F 1 "270 Ohms" H 7070 2055 50  0000 L CNN
+F 2 "" V 6930 2100 50  0001 C CNN
+F 3 "~" H 7000 2100 50  0001 C CNN
+	1    7000 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5D8E6EC4
+P 8500 1850
+F 0 "R2" H 8570 1896 50  0000 L CNN
+F 1 "1KOhms" H 8570 1805 50  0000 L CNN
+F 2 "" V 8430 1850 50  0001 C CNN
+F 3 "~" H 8500 1850 50  0001 C CNN
+	1    8500 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP C1
+U 1 1 5D8E77C1
+P 6250 1850
+F 0 "C1" H 6368 1896 50  0000 L CNN
+F 1 "1000uF" H 6368 1805 50  0000 L CNN
+F 2 "" H 6288 1700 50  0001 C CNN
+F 3 "~" H 6250 1850 50  0001 C CNN
+	1    6250 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP C2
+U 1 1 5D8E7DDE
+P 7000 1600
+F 0 "C2" H 7118 1646 50  0000 L CNN
+F 1 "100uF" H 7118 1555 50  0000 L CNN
+F 2 "" H 7038 1450 50  0001 C CNN
+F 3 "~" H 7000 1600 50  0001 C CNN
+	1    7000 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C3
+U 1 1 5D8E86CE
+P 9250 1850
+F 0 "C3" H 9365 1896 50  0000 L CNN
+F 1 "0.1uF" H 9365 1805 50  0000 L CNN
+F 2 "" H 9288 1700 50  0001 C CNN
+F 3 "~" H 9250 1850 50  0001 C CNN
+	1    9250 1850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4900 1350 5250 1350
+Wire Wire Line
+	5250 1350 5250 1700
+Wire Wire Line
+	5250 2000 5250 2350
+Wire Wire Line
+	5250 2350 4900 2350
+Wire Wire Line
+	4600 2350 4250 2350
+Wire Wire Line
+	4250 2350 4250 2000
+Wire Wire Line
+	4250 1700 4250 1350
+Wire Wire Line
+	4250 1350 4600 1350
+Wire Wire Line
+	3750 1550 4050 1550
+Wire Wire Line
+	4050 1550 4050 1050
+Wire Wire Line
+	4050 1050 5250 1050
+Wire Wire Line
+	5250 1050 5250 1350
+Connection ~ 5250 1350
+Wire Wire Line
+	4250 2350 4050 2350
+Wire Wire Line
+	4050 2350 4050 1950
+Wire Wire Line
+	4050 1950 3750 1950
+Connection ~ 4250 2350
+Wire Wire Line
+	4250 1350 4250 1200
+Connection ~ 4250 1350
+Wire Wire Line
+	4250 1200 4000 1200
+Wire Wire Line
+	5250 2350 5500 2350
+Wire Wire Line
+	5500 2350 5500 1350
+Connection ~ 5250 2350
+Wire Wire Line
+	6250 2000 6250 2350
+Wire Wire Line
+	5900 2350 6250 2350
+Wire Wire Line
+	5500 1350 6250 1350
+Wire Wire Line
+	6250 1350 6250 1700
+Wire Wire Line
+	6250 1350 7000 1350
+Wire Wire Line
+	7000 1350 7000 1450
+Connection ~ 6250 1350
+Wire Wire Line
+	7000 1750 7000 1850
+Wire Wire Line
+	7000 2250 7000 2350
+Wire Wire Line
+	7000 2350 6250 2350
+Connection ~ 6250 2350
+Wire Wire Line
+	7550 2350 7000 2350
+Connection ~ 7000 2350
+Wire Wire Line
+	7750 1750 7750 1850
+Wire Wire Line
+	7750 1850 7000 1850
+Connection ~ 7750 1850
+Wire Wire Line
+	7750 1850 7750 2050
+Connection ~ 7000 1850
+Wire Wire Line
+	7000 1850 7000 1950
+Wire Wire Line
+	7750 1450 7750 1350
+Wire Wire Line
+	7750 1350 7000 1350
+Connection ~ 7000 1350
+Wire Wire Line
+	9250 1700 9250 1350
+Wire Wire Line
+	9250 1350 8500 1350
+Wire Wire Line
+	8500 1350 8500 1700
+Wire Wire Line
+	8500 2000 8500 2350
+Wire Wire Line
+	8500 2350 9250 2350
+Wire Wire Line
+	9250 2350 9250 2000
+Wire Wire Line
+	8500 2350 7950 2350
+Connection ~ 8500 2350
+Wire Wire Line
+	7750 1350 8500 1350
+Connection ~ 7750 1350
+Connection ~ 8500 1350
+Wire Wire Line
+	5900 2650 4000 2650
+Wire Wire Line
+	4000 1200 4000 2650
+Wire Wire Line
+	5900 2350 5900 2650
+Wire Wire Line
+	5150 5000 5500 5000
+Wire Wire Line
+	5500 4050 6400 4050
+Wire Wire Line
+	6400 4150 5600 4150
+Wire Wire Line
+	5600 4150 5600 4700
+Wire Wire Line
+	5500 4050 5500 5000
+Wire Wire Line
+	5600 4700 5150 4700
+Wire Wire Line
+	5150 4600 5700 4600
+Wire Wire Line
+	5700 4600 5700 4250
+Wire Wire Line
+	5700 4250 6400 4250
+Wire Wire Line
+	5800 3900 5150 3900
+$Comp
+L power:GND #PWR?
+U 1 1 5D938529
+P 9250 2350
+F 0 "#PWR?" H 9250 2100 50  0001 C CNN
+F 1 "GND" H 9255 2177 50  0000 C CNN
+F 2 "" H 9250 2350 50  0001 C CNN
+F 3 "" H 9250 2350 50  0001 C CNN
+	1    9250 2350
+	1    0    0    -1  
+$EndComp
+Connection ~ 9250 2350
+$Comp
+L power:GND #PWR?
+U 1 1 5D938E3D
+P 7200 5500
+F 0 "#PWR?" H 7200 5250 50  0001 C CNN
+F 1 "GND" H 7205 5327 50  0000 C CNN
+F 2 "" H 7200 5500 50  0001 C CNN
+F 3 "" H 7200 5500 50  0001 C CNN
+	1    7200 5500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7200 5500 7200 5350
+Wire Wire Line
+	6900 6000 6900 5350
+Wire Wire Line
+	4550 6000 6900 6000
+$Comp
+L RF:NRF24L01_Breakout MóduloRF
+U 1 1 5D94432B
+P 6900 4350
+F 0 "MóduloRF" H 7280 4396 50  0000 L CNN
+F 1 "NRF24L01" H 7280 4305 50  0000 L CNN
+F 2 "RF_Module:nRF24L01_Breakout" H 7050 4950 50  0001 L CIN
+F 3 "http://www.nordicsemi.com/eng/content/download/2730/34105/file/nRF24L01_Product_Specification_v2_0.pdf" H 6900 4250 50  0001 C CNN
+	1    6900 4350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6900 5350 7200 5350
+Wire Wire Line
+	6400 4550 5800 4550
+Wire Wire Line
+	5800 3900 5800 4550
+Wire Wire Line
+	6900 5350 6900 4950
+Connection ~ 6900 5350
+Text GLabel 6900 3750 0    50   Input ~ 0
+3.3V
+Text GLabel 3950 3200 0    50   Input ~ 0
+3.3V
+Wire Wire Line
+	9250 1350 9250 1150
+Wire Wire Line
+	9250 1150 9000 1150
+Connection ~ 9250 1350
+Wire Notes Line
+	3650 2900 3650 6250
+Wire Notes Line
+	3650 6250 5400 6250
+Wire Notes Line
+	5400 6250 5400 2900
+Wire Notes Line
+	5400 2900 3650 2900
+Text Notes 7350 3450 0    50   ~ 10
+Módulo RF
+Wire Notes Line
+	6250 3500 7750 3500
+Wire Notes Line
+	7750 3500 7750 5850
+Wire Notes Line
+	6250 5850 6250 3500
+Wire Notes Line
+	6250 5850 7750 5850
+$Comp
+L power:AC #PWR?
+U 1 1 5D97D12C
+P 2700 1550
+F 0 "#PWR?" H 2700 1450 50  0001 C CNN
+F 1 "AC" H 2700 1825 50  0000 C CNN
+F 2 "" H 2700 1550 50  0001 C CNN
+F 3 "" H 2700 1550 50  0001 C CNN
+	1    2700 1550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2700 1550 2950 1550
+$Comp
+L power:GND #PWR?
+U 1 1 5D97E97A
+P 2700 1950
+F 0 "#PWR?" H 2700 1700 50  0001 C CNN
+F 1 "GND" H 2705 1777 50  0000 C CNN
+F 2 "" H 2700 1950 50  0001 C CNN
+F 3 "" H 2700 1950 50  0001 C CNN
+	1    2700 1950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2700 1950 2950 1950
+Text GLabel 9000 1150 0    50   Input ~ 10
+3.3V
+Wire Notes Line
+	9600 950  9600 2800
+Wire Notes Line
+	9600 2800 2600 2800
+Wire Notes Line
+	2600 2800 2600 950 
+Wire Notes Line
+	2600 950  9600 950 
+Wire Wire Line
+	3950 3200 4550 3200
+Text Notes 5150 6350 0    50   ~ 10
+ESP32\n
+$Comp
+L RF_Module:ESP32-WROOM-32 Central
+U 1 1 5D926EFF
+P 4550 4600
+F 0 "Central" H 4550 6181 50  0000 C CNN
+F 1 "ESP32-WROOM-32" H 4550 6090 50  0000 C CNN
+F 2 "RF_Module:ESP32-WROOM-32" H 4550 3100 50  0001 C CNN
+F 3 "https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32_datasheet_en.pdf" H 4250 4650 50  0001 C CNN
+	1    4550 4600
+	1    0    0    -1  
+$EndComp
+Text Notes 2600 900  0    50   ~ 10
+Circuito de Alimentação
+$EndSCHEMATC

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+        <title>Fonte de Alimentação - 3v3 AC/DC</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+        <link href="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.css" rel="stylesheet" type="text/css">
+        <style>
+.task-list-item { list-style-type: none; } .task-list-item-checkbox { margin-left: -20px; vertical-align: middle; }
+</style>
+        <style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        
+        <script src="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.js"></script>
+    </head>
+    <body>
+        <h1 id="fonte-de-alimenta%c3%a7%c3%a3o---3v3-acdc">Fonte de Alimentação - 3v3 AC/DC</h1>
+<p>A sessão abaixo descreve os requisitos de alimentação para o sistema de atuadores.</p>
+<p>O microcontrolador escolhido para o controle do sistema de atuador é a ESP32. De acordo com seu datasheet, sua tensão de alimentação é 3,3V e sua corrente é de 500mA na sua máxima operação. Logo, é necessário que seja elaborado um circuito retificador para a conversão da tensão alternada fornecida pela concessionária de energia elétrica para a tensão contínua adequada para o sistema.</p>
+<p>Dado que a tensão entregue pela concessionária de energia elétrica de Brasília (CEB) é de 220V à 60Hz, será necessário um transformador de aproximadamente 35:1, transformando 220VAC para aproximadamente 6,3VAC. Após a tensão ser abaixada, o sinal elétrico passa por uma ponte retificadora, afim de transformar a senóide em pulsos positivos de frequência duas vezes maior que a da entrada.</p>
+<p>Passado este processo de retificação da onda, é necessário a filtragem dos pulsos, logo é necessário que o capacitor possua tempo de carga e descarga lento, a fim de que a descarga seja mais lenta que a próxima carga do capacitor. A saída nessa parte do circuito está entre 6,3V e 4,5V.</p>
+<p>Para a adequação da tensão na saída, é colocado um diodo zener de 3,9V, para que a tensão seja constante à essa tensão. A saída do diodo é ligada à base de um transistor TBJ pnp com tensão VEB de 0,6V, para que a corrente entregue seja maior. Logo, a saída do circuito terá 3,3V e corrente máxima de 1A.</p>
+<p>Aqui vai a imagem do circuito no kicad</p>
+<p>Aqui vai a lista dos materiais.</p>
+<ul>
+<li>1 Transistor TBJ TIP42 PNP</li>
+<li>1 Resistor 270<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">Ω</mi></mrow><annotation encoding="application/x-tex">\Omega</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord">Ω</span></span></span></span> 1/2W</li>
+<li>1 Resistor 1K<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">Ω</mi></mrow><annotation encoding="application/x-tex">\Omega</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord">Ω</span></span></span></span> 1/2W</li>
+<li>2 Capacitores 1000uF/25V Eletrolitico</li>
+<li>1 Capacitor 100uF/25V Eletrolitico</li>
+<li>1 Capacitor 0.1uF/50V Cerâmico</li>
+<li>4 diodos 1N4002 - 100V, 1A</li>
+<li>1 diodo zener 1N4730A 3,9V 1W</li>
+<li>1 transformador 230VAC - 6.3VAC 1A</li>
+</ul>
+
+    </body>
+    </html>

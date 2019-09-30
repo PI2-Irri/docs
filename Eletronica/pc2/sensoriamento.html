@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+        <title>Especificaçao de Sensoriamento</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+        <link href="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.css" rel="stylesheet" type="text/css">
+        <style>
+.task-list-item { list-style-type: none; } .task-list-item-checkbox { margin-left: -20px; vertical-align: middle; }
+</style>
+        <style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        
+        <script src="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.js"></script>
+    </head>
+    <body>
+        <h3 id="especifica%c3%a7ao-de-sensoriamento">Especificaçao de Sensoriamento</h3>
+<ol>
+<li><strong>Sensor de Temperatura</strong></li>
+</ol>
+<p>O projeto tem como objetivo automatizar a irrigação de uma gramado com área aproximada de <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>400</mn><msup><mi>m</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">400m^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">4</span><span class="mord">0</span><span class="mord">0</span><span class="mord"><span class="mord mathdefault">m</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span>. O sensor então deve ser a prova dágua, afim de seja possível aferir a temperatura da superfície do solo sem que haja preocupação com a integridade física do sensor. Senso assim, o sensor que se adequa ao requisitos do projeto é o sensor DS18B20 da Maxim Integrated.</p>
+<p>O sensor DS18B20 é um termômetro digital oferece medidas de temperatura em Célsius com resolução de 9 a 12 bits e possui uma função de alarme. Cada sensor utiliza apenas uma porta para comunicação com o microcontrolador. Ademais, o sensor pode receber alimentação diretamente do microcontrolador, não necessitando de uma alimentação externa. Todo sensor possui um código serial único de 64 bits, o que permite que vários sensores funcionem utilizando a mesma porta de comunicação.</p>
+<p>A seguir, está uma lista com algumas características do sensor.</p>
+<ul>
+<li>Tensão de Alimentação - 3,0V a 5,0V;</li>
+<li>Corrente de Operação - 1.5mA;</li>
+<li>Comunicação requer apenas uma porta do microcontrolador;</li>
+<li>Faixa de operação: -55ºC até +125ºC;</li>
+<li><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>±</mo></mrow><annotation encoding="application/x-tex">\pm</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord">±</span></span></span></span> 0,5ºC de precisão garantida na faixa de temperatura entre -10ºC e +85ºC;</li>
+<li>Resolução de 9 a 12 bits programável;</li>
+<li>Funciona com alimentação parasita (Alimentação pelo fio de comunicação);</li>
+<li>Altamente escalável;</li>
+<li>Função alarme ajustável pelo usuário.</li>
+</ul>
+<ol start="2">
+<li><strong>Sensor de Umidade</strong></li>
+</ol>
+<p>O projeto possui também como objetivo o monitoramento da irrigação do gramado. Logo, é necessário um sensor de umidade que possua alta durabilidade. Estão disponíveis no mercado sensores resistivos, capacitivos e tensiômetros. Para o propósito deste projeto, foi decidido, de acordo com os requisitos, que o sensor escolhido é o sensor capacitivo. O sensor capacitivo que melhor se adequa é o <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>S</mi><mi>E</mi><mi>N</mi><mn>0193</mn></mrow><annotation encoding="application/x-tex">SEN0193</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mord mathdefault" style="margin-right:0.05764em;">E</span><span class="mord mathdefault" style="margin-right:0.10903em;">N</span><span class="mord">0</span><span class="mord">1</span><span class="mord">9</span><span class="mord">3</span></span></span></span>.</p>
+<p>O sensor de umidade capacitivo mede a quantidade de umidade no solo por sensibilidade capacitiva. Isso o torna menos sucetível a corrosão o que garante a alta durabilidade do sensor. Ele possui um regulador de tensão incluso, fazendo possuir uma tensão de operação entre 3,3V e 5,0V, o que proporciona boa compartibilidade com microcontroladores que operam na mesma faixa de tensão. Sua comunicação com microcontrolador é do tipo analógica, fazendo com o que o microcontrolador possua um conversor analógico digital para que seja realizada a leitura dos dados provenientes do sensor.</p>
+<p>A seguir, está uma lista com algumas caracteríscitas do sensor.</p>
+<ul>
+<li>Tensão de Alimentação - 3,3V a 5,0V.</li>
+<li>Corrente de Operação - 5mA</li>
+<li>Tensão de Saída - 0 a 3.0V.</li>
+<li>Dimensões: 9,80 x 2,3 cm</li>
+<li>Peso: 15g</li>
+</ul>
+
+    </body>
+    </html>

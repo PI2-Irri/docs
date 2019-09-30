@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+        <title>Sensoriamento do Sistema de Atuadores</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+        <link href="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.css" rel="stylesheet" type="text/css">
+        <style>
+.task-list-item { list-style-type: none; } .task-list-item-checkbox { margin-left: -20px; vertical-align: middle; }
+</style>
+        <style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        
+        <script src="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.js"></script>
+    </head>
+    <body>
+        <h1 id="sensoriamento-do-sistema-de-atuadores">Sensoriamento do Sistema de Atuadores</h1>
+<p>O sistema de atuadores será responsável pelo armazenamento e distribuição da água utilizada no sistema de irrigação, de acordo com as rotinas de automação. Na entrada do reservatório, será utilizado um sensor de fluxo para a coleta de dados referente ao gasto hídrico. Também no reservatório, será utilizado um sensor de nível para o monitoramento da quantidade de água, assim evitando que o sistema de bombeamento funcione a vazio.  Falar aqui sobre as subseções.  blábláblá</p>
+<h2 id="sensor-de-fluxo">Sensor de Fluxo</h2>
+<p>Um sensor de fluxo de água é um dispositivo que consiste basicamente de um corpo de válvula de plástico, um conjunto de rotor e um sensor de corrente do tipo Hall. É instalado na entrada de água para da detecção do fluxo. Quando a água flui através do conjunto rotor, o mesmo gira, fazendo com que o sensor Hall gere em sua saída uma onda quadrada com frequência que aumenta diretamente proporcional com o fluxo.</p>
+<p>Dentre os sensores disponíveis no mercado, destaca-se o YF-S201B, que de acordo com suas especificações técnicas e preço, se adequa ao projeto Irri.</p>
+<p>A seguir, está uma lista com algumas especificações do sensor.</p>
+<ul>
+<li>Leve, pequeno e fácil de montar;</li>
+<li>Tipo de Sensor: Efeito Hall;</li>
+<li>Tensão de Operação: 5,0V a 24,0V;</li>
+<li>Corrente máxima de operação: 15mA (5,0V);</li>
+<li>Faixa de Fluxo: 1 a 30l/min;</li>
+<li>Pressão Máxima: 2,0 MPa;</li>
+<li>Pulsos por litro: 450;</li>
+<li>Frequência: 7,5 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>⋅</mo></mrow><annotation encoding="application/x-tex">\cdot</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.44445em;vertical-align:0em;"></span><span class="mord">⋅</span></span></span></span> Fluxo(l/min);</li>
+<li>Temperatura de operação: <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>−</mo><mn>25</mn><mi mathvariant="normal">°</mi></mrow><annotation encoding="application/x-tex">-25\degree</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.77777em;vertical-align:-0.08333em;"></span><span class="mord">−</span><span class="mord">2</span><span class="mord">5</span><span class="mord">°</span></span></span></span>C a <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>80</mn><mi mathvariant="normal">°</mi></mrow><annotation encoding="application/x-tex">80\degree</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord">8</span><span class="mord">0</span><span class="mord">°</span></span></span></span>C;</li>
+<li>Pinaegem: Vermelho → alimentação, Amarelo → Saída PWM, Preto → GND</li>
+</ul>
+<h2 id="sensor-de-n%c3%advel-de-%c3%81gua">Sensor de Nível de Água</h2>
+<p>Um sensor de nível é um dispositivo de instrumentação eletrônica que funciona como uma chave on-off, que pode ser utilizado para o acionamento de bombas, relés, válvulas solenoides, lâmpadas e etc através de um microcontrolador. É construído de material plástico, composto de uma haste, na qual desliza um cilindro feito de material pouco denso. Esse cilindro possui um íma que aciona um sensor magnético no meio da haste, que por sua vez fecha o contato dos fios que saem do sensor.</p>
+<p>É importante notar que, como seu funcionamento é baseado em uma chave liga e desliga, é fundamental que sejam utilizados resistores de pull-down na entrada do microcontrolador para que não haja curto circuito na porta de entrada do sinal.</p>
+<p>A seguir, está uma lista com algumas especificações do sensor.</p>
+<ul>
+<li>Material: Pláscito PP;</li>
+<li>Tensão Máxima de Operação: 100V DC ;</li>
+<li>Corrente Máxima de Operação: 1A;</li>
+<li>Carga Máxima: 50W;</li>
+<li>Temperatura de operação: -20<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">°</mi></mrow><annotation encoding="application/x-tex">\degree</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord">°</span></span></span></span>C a 80<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">°</mi></mrow><annotation encoding="application/x-tex">\degree</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord">°</span></span></span></span>C;</li>
+<li>Peso: 12g;</li>
+<li>Dimensões: 50 x 19mm.</li>
+</ul>
+
+    </body>
+    </html>
