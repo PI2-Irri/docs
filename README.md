@@ -7,6 +7,10 @@ Se trata de um irrigador automático que consegue atender uma área de 400 m2. A
 
 ## Vídeo Propaganda do projeto
 
+Clique para assistir
+
+[![Clique para assistir](https://user-images.githubusercontent.com/18364727/70186755-5e085d00-16cb-11ea-927a-d3ac5d6bf276.JPG)](https://youtu.be/KJ9SS_ykexc)
+
 
 ## Manual de usuário
 [User Manual.pdf](https://github.com/PI2-Irri/docs/blob/master/User%20Manual.pdf)
